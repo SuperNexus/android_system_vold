@@ -90,7 +90,7 @@ const char *Volume::LOOPDIR           = "/mnt/obb";
 
 const char *Volume::BLKID_PATH = "/system/bin/blkid";
 
-static const char *stateToStr(int state) {
+extern "C" const char *stateToStr(int state) {
     if (state == Volume::State_Init)
         return "Initializing";
     else if (state == Volume::State_NoMedia)
